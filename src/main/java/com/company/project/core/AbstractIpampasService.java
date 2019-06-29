@@ -2,7 +2,7 @@ package com.company.project.core;
 
 
 import com.ipampas.framework.mybatis.builder.OrderBy;
-import com.ipampas.framework.mybatis.mapper.PageMapper;
+import com.ipampas.framework.mybatis.mapper.BaseMapper;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
 public class AbstractIpampasService<T> implements IpampasService<T> {
 
     @Resource
-    protected PageMapper<T> mapper;
+    protected BaseMapper<T> mapper;
 
     @Override
     public int save(T model) {
