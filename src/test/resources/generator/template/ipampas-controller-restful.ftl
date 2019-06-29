@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("${baseRequestMapping}")
 @Api
-public class ${modelNameUpperCamel}Resource {
+public class ${modelNameUpperCamel}Controller {
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
@@ -57,6 +57,6 @@ public class ${modelNameUpperCamel}Resource {
         //
         PageHelper.startPage(page, size);
         List<${modelNameUpperCamel}> list = ${modelNameLowerCamel}Service.findByCondition(new Object());
-    return PageUtils.transToPage(list);
+        return PageUtils.transToPage(list);
     }
-    }
+}
