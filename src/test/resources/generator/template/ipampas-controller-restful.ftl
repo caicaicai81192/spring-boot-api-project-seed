@@ -1,5 +1,6 @@
 package ${basePackage}.web;
 
+import ${basePackage}.core.AbstractIpampasController;
 import ${basePackage}.model.${modelNameUpperCamel};
 import ${basePackage}.service.${modelNameUpperCamel}Service;
 import ${basePackage}.util.PageUtils;
@@ -19,7 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("${baseRequestMapping}")
 @Api
-public class ${modelNameUpperCamel}Controller {
+public class ${modelNameUpperCamel}Controller extends AbstractIpampasController{
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
