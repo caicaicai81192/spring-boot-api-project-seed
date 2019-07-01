@@ -13,7 +13,7 @@ import java.util.List;
  * @date 2019/6/29 8:43 PM
  * @since 1.0.0
  */
-public class AbstractIpampasService<T> implements IpampasService<T> {
+public abstract class AbstractIpampasService<T> implements IpampasService<T> {
 
     @Resource
     protected BaseMapper<T> mapper;
