@@ -85,7 +85,7 @@ public class CodeGenerator {
 
         PluginConfiguration pluginConfiguration = new PluginConfiguration();
         pluginConfiguration.setConfigurationType("tk.mybatis.mapper.generator.MapperPlugin");
-        pluginConfiguration.addProperty("mappers", MAPPER_INTERFACE_REFERENCE);
+        pluginConfiguration.addProperty("mappers", MAPPER_INTERFACE_REFERENCE1);
         context.addPluginConfiguration(pluginConfiguration);
 
         JavaModelGeneratorConfiguration javaModelGeneratorConfiguration = new JavaModelGeneratorConfiguration();

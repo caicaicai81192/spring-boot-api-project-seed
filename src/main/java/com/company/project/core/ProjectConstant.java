@@ -14,4 +14,7 @@ public final class ProjectConstant {
     public static final String CONTROLLER_PACKAGE = BASE_PACKAGE + ".web";//生成的Controller所在包
 
     public static final String MAPPER_INTERFACE_REFERENCE = BASE_PACKAGE + ".core.Mapper";//Mapper插件基础接口的完全限定名
+
+
+    public static final String MAPPER_INTERFACE_REFERENCE1 = "com.ipampas.framework.mybatis.mapper.BaseMapper";//ipampas Mapper插件基础接口的完全限定名
 }
