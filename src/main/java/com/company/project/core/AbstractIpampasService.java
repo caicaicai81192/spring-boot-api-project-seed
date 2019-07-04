@@ -3,8 +3,8 @@ package com.company.project.core;
 
 import com.ipampas.framework.mybatis.builder.OrderBy;
 import com.ipampas.framework.mybatis.mapper.BaseMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public abstract class AbstractIpampasService<T> implements IpampasService<T> {
 
-    @Resource
+    @Autowired
     protected BaseMapper<T> mapper;
 
     @Override
