@@ -58,7 +58,7 @@ public class MybatisConfigurer {
         Properties properties = new Properties();
         properties.setProperty("mappers", MAPPER_INTERFACE_REFERENCE1);
         properties.setProperty("notEmpty", "false");//insert、update是否判断字符串类型!='' 即 test="str != null"表达式内是否追加 and str != ''
-        properties.setProperty("IDENTITY", "MYSQL");
+//        properties.setProperty("IDENTITY", "MYSQL");//使用默认策略 IDENTITY不支持oracle
         mapperScannerConfigurer.setProperties(properties);
 
         return mapperScannerConfigurer;

@@ -18,9 +18,9 @@ import static com.company.project.core.ProjectConstant.*;
  */
 public class CodeGenerator {
     //TODO JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/test";
-    private static final String JDBC_USERNAME = "root";
-    private static final String JDBC_PASSWORD = "123456";
+    private static final String JDBC_URL = "jdbc:mysql://mysql-dev.ipampas.net/qianniu3_dev";
+    private static final String JDBC_USERNAME = "dev";
+    private static final String JDBC_PASSWORD = "Pps@dev1234";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
 
     private static final String PROJECT_PATH = System.getProperty("user.dir");//项目在硬盘上的基础路径
@@ -39,7 +39,7 @@ public class CodeGenerator {
 
     public static void main(String[] args) {
         //TODO 输入表名
-        genCode("user");
+        genCode("form");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 
@@ -107,7 +107,8 @@ public class CodeGenerator {
         TableConfiguration tableConfiguration = new TableConfiguration(context);
         tableConfiguration.setTableName(tableName);
         if (StringUtils.isNotEmpty(modelName)) tableConfiguration.setDomainObjectName(modelName);
-        tableConfiguration.setGeneratedKey(new GeneratedKey("id", "Mysql", true, null));
+        //使用默认策略
+//        tableConfiguration.setGeneratedKey(new GeneratedKey("id", "Mysql", true, null));
         context.addTableConfiguration(tableConfiguration);
 
         List<String> warnings;
